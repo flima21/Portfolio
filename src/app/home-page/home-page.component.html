@@ -1,0 +1,153 @@
+<div class="navbar-fixed">
+  <nav [ngStyle]="{'background-color': colorLight ? 'white' : 'black'}">
+    <div class="nav-wrapper">
+      <i [ngClass]="currentIcon" style="display: inline;margin-left: 20px;" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"></i>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <div class="switch " style="display: inline;" *ngIf="colorLight">
+            <label>
+              
+              <i class="bi bi-sun" style="display: inline;" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"></i>
+
+              <input type="checkbox" style="text-align: right;" (click)="setModeTheme()">
+              <span class="lever"></span>
+              <i class="bi bi-moon" style="display: inline;"[ngStyle]="{'color':colorLight ? 'black' : 'white'}"></i>
+            </label>
+          </div>
+
+          <div class="switch " style="display: inline;" *ngIf="!colorLight">
+            <label>
+              <i class="bi bi-sun" style="display: inline;" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"></i>
+              <input type="checkbox" style="text-align: right;" checked (click)="setModeTheme()">
+              <span class="lever"></span>
+              <i class="bi bi-moon" style="display: inline;" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"></i>
+            </label>
+          </div>
+        </li>
+        <li><a href="#home"   [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>HOME</b></a></li>
+        <li><a href="#about"  [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>SOBRE</b></a></li>
+        <li><a href="#skills" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>HABILIDADES</b></a></li>
+        <li><a href="#contact"[ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>CONTATO</b></a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<!------------------------------------------------------------About------------------------------------------------------------>
+<section id="about" [ngStyle]="{'background-color': colorLight ? '#e0e0e0' : 'black'}">
+  <div class="container">
+    <div class="col s12 m12 center-align">
+
+      <img src="../../assets/profile-icon.jpeg" [ngStyle]="{'border': colorLight ? '6px solid black' : '6px solid white'}" style="border-radius: 200px;margin-top: 10px;"
+        width="300px">
+
+      <p class="center-align" style="text-align:justify;" [ngStyle]="{'color':colorLight ? 'black' : 'white'}">
+        Profissional em estudos com Python certificado pela Universidade de Michingan promovido pela plataforma
+        Coursera,
+        com ampla experiência de trabalho nas áreas de banco de dados (SQL Server, MySQL, Firebase e Oracle DB) e ETL
+        com linguagens Python e R. Atualmente, sou discente no curso de Análise e Desenvolvimento de Sistemas pela
+        Faculdade de Engenharia de Sorocaba, além disso, cursei 3 anos de Geografia pela
+        Universidade Pontifícia Católica de Campinas, onde desenvolvi projetos e experiências com ArcGIS, QGIS,
+        análise do Senso Demográfico e lapidação de dados, que foram aproveitados no Estágio de 12 meses na EMBRAPA
+        (Campinas/SP)
+        com o foco na identificação e melhoria das tecnologias para áreas de plantio de soja e produção de carne suína
+        em território
+        brasileiro. Atualmente tenho me dedicado ao mercado financeiro, atuando na transformação digital, incorporação
+        de novas
+        tecnologias e métodos de análise de dados para a concessão e monitoramento de risco de crédito ao setor de
+        bebidas,
+        hoje sou responsável pelo fornecimento de dados e ETL de todas as revendas do Grupo Cerveja Império. Possuo
+        experiência
+        com o ambiente AWS, Oracle, linguagens Python, R e SQL, NoSQL para análise de dados, ferramentas de
+        Geoprocessamento e
+        Sensoriamento Remoto como Earth Engine, ArcGIS e QGIS,
+        sistema operacionais Linux (sem gráfico), ademais, possuo certificação Oracle Cloud em Infraestrutura e
+        Database.</p>
+
+      <div class="center-align">
+        <a class="waves-effect waves-light btn"
+          style="background: rgba(59, 198, 0, 0.737); margin-left: auto; margin-bottom: 10px;"><i
+            class="bi bi-download"></i><b> download cv</b></a>
+        <a class="waves-effect waves-light btn"
+          style="background: rgb(41, 109, 255); margin-left: 5px; margin-bottom: 10px;"
+        ><i class="bi bi-linkedin"></i><b>
+            found me</b>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!------------------------------------------------------------Skills------------------------------------------------------------>
+<div class="divider" [ngStyle]="{'color-line': colorLight ? 'white' : 'black'}" ></div>
+<section id="skills" [ngStyle]="{'background-color': colorLight ? 'white' : 'black'}" >
+  <div class="container">
+    <div class="col s12 m12 center-align" style="padding: 10px;">
+      <h1 [ngStyle]="{'color': colorLight ? 'black' : 'white'}">SKILLS</h1>
+      <ngx-gauge [ngStyle]="{'color': colorLight ? 'black' : 'white'}" style="margin-right: 5px;"
+        [type]="'full'" 
+        [value]="valueSkillPython" 
+        [label]="'Python'" 
+        [append]="'%'" 
+        [cap]="'butt'"
+        [backgroundColor]="'white'"
+        [foregroundColor]="'yellow'" >
+      </ngx-gauge>
+
+      <ngx-gauge [ngStyle]="{'color': colorLight ? 'black' : 'white'}"
+        [type]="'full'" 
+        [value]="valueSkillR" 
+        [label]="'R'" 
+        [append]="'%'" 
+        [backgroundColor]="'white'"
+        [foregroundColor]="'blue'" >
+      </ngx-gauge>
+      
+      <ngx-gauge [ngStyle]="{'color': colorLight ? 'black' : 'white'}"
+        [type]="'full'" 
+        [value]="valueSkillSql" 
+        [label]="'SQL'" 
+        [append]="'%'" 
+        [backgroundColor]="'white'"
+        [foregroundColor]="'red'" >
+      </ngx-gauge>
+
+    </div>
+  </div>
+</section>
+
+<!-- <div class="divider"></div>
+
+<section id="contact">
+  <div class="container">
+
+  </div> 
+</section>-->
+<!-- </div> -->
+
+
+<footer class="page-footer" [ngStyle]="{'background-color': colorLight ? 'white' : 'black'}">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>CONTATO</b></h5>
+        <ul>
+          <li><i [ngStyle]="{'color':colorLight ? 'black' : 'white'}" class="bi bi-linkedin mx-1"></i><a [ngClass]="{'grey-text text-lighten-3':!colorLight, 'black-text text-lighten-3':colorLight}" href="https://www.linkedin.com/in/felipe-lima-294703202/" target="_blank"> felipe-lima-294703202</a></li>
+          <li><i [ngStyle]="{'color':colorLight ? 'black' : 'white'}" class="bi bi-github"></i><a [ngClass]="{'grey-text text-lighten-3':!colorLight, 'black-text text-lighten-3':colorLight}" href="https://github.com/flima21" target="_blank"> flima21</a></li>
+          <li><i [ngStyle]="{'color':colorLight ? 'black' : 'white'}" class="bi bi-envelope-arrow-up-fill"></i><a [ngClass]="{'grey-text text-lighten-3': !colorLight, 'black-text text-lighten-3':colorLight}" href="mailto:felipe.pedroso2108@gmail.com"> felipe.pedroso2108@gmail.com</a></li>
+          <li><i [ngStyle]="{'color':colorLight ? 'black' : 'white'}" class="bi bi-telephone"></i><a [ngClass]="{'grey-text text-lighten-3':!colorLight, 'black-text text-lighten-3':colorLight}"> (11) 97595-8697</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+    <div class="container">
+      <p>Felipe Lima</p>
+       <!-- <a [ngClass]="{'grey-text text-lighten-3':colorLight, 'black-text text-lighten-3':!colorLight}" href="#!">More Links</a> -->
+    </div>
+  </div> 
+
+</footer>
