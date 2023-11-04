@@ -9,15 +9,14 @@ import { interval } from 'rxjs';
     <div [chart]="chart"></div>
   `,
 })
+
 export class HomePageComponent {
+
 
   colorLight = false;
   currentIcon = 'bi bi-database';
   iconsIndex = 0;
   icons = ['bi bi-database','bi bi-hdd','bi bi-bar-chart','bi bi-pc-display-horizontal'];
-  
-  // chartSkillPython : Chart;
-  chartId = 'tachometer-chart';
 
   //Skilss value 
   valueSkillPython = 80;
@@ -25,9 +24,22 @@ export class HomePageComponent {
   valueSkillSql = 85;
   valueSkillJs = 25;
   valueSkillAngular = 20;
-  valueSkillHtml = 60;
-  valueSkillCss = 60;
   valueSkillPhp = 70;
+  valueSkillLinux = 40;
+
+  // Type Gauge 
+  typeGauge = 'semi';
+
+  // Certificações 
+  objCertifications = [
+    { name:'Programming for Everybody (Getting Started with Python)',codeAuth:'5ETZKR9NAKH8',linkAuth:'https://coursera.org/verify/5ETZKR9NAKH8',school:'COURSERA' ,image:''},
+    { name:'Oracle Cloud Infrastructure 2023 Certified Foundations Associate',codeAuth:'302305695OCIF2023CA',linkAuth:'',school:'ORACLE UNIVERSITY'                ,image:''},
+    { name:'Oracle Cloud Data Management 2023 Certified Foundations Associate',codeAuth:'302305695OCDMF2023',linkAuth:'',school:'ORACLE UNIVERSITY'                ,image:''},
+    { name:'Santander BootCamp',codeAuth:'',linkAuth:'',school:'SANTANDER BRASIL'                                                                                  ,image:'../../assets/icons/santanderCardPng.png'},
+    // { name:'Santander Coders 2023 2ª Edição',codeAuth:'',linkAuth:'',school:'Santander Brasil'                                                                  ,image:''},
+  ];               
+
+
 
   constructor() {
     interval(1000).subscribe(() => {
@@ -37,6 +49,13 @@ export class HomePageComponent {
   
   }
 
+  scrollSmoothSection(idSection:string) {
+    const nameSection = document.getElementById(idSection);
+
+    if(nameSection) {
+      nameSection.scrollIntoView({behavior:'smooth'});
+    }
+  }
   setModeTheme() {
     if (this.colorLight) {
       this.colorLight = false;

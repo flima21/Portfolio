@@ -5,19 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { TachometerChartComponent } from './tachometer-chart/tachometer-chart.component';
-import { ChartModule } from 'angular-highcharts';
 import { NgxGaugeModule } from 'ngx-gauge';
+import { LoadingComponent } from './loading/loading.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    TachometerChartComponent
+    TachometerChartComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxGaugeModule
+    NgxGaugeModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

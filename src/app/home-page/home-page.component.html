@@ -4,7 +4,7 @@
       <i [ngClass]="currentIcon" style="display: inline;margin-left: 20px;" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"></i>
       <ul class="right hide-on-med-and-down">
         <li>
-          <div class="switch " style="display: inline;" *ngIf="colorLight">
+          <div class="switch " style="display: inline;margin-right: 10px;" *ngIf="colorLight">
             <label>
               
               <i class="bi bi-sun" style="display: inline;" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"></i>
@@ -24,17 +24,16 @@
             </label>
           </div>
         </li>
-        <li><a href="#home"   [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>HOME</b></a></li>
-        <li><a href="#about"  [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>SOBRE</b></a></li>
-        <li><a href="#skills" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>HABILIDADES</b></a></li>
-        <li><a href="#contact"[ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>CONTATO</b></a></li>
+        <li><a (click)="scrollSmoothSection('about')"  [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>SOBRE</b></a></li>
+        <li><a (click)="scrollSmoothSection('skills')" [ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>HABILIDADES</b></a></li>
+        <li><a (click)="scrollSmoothSection('contact')"[ngStyle]="{'color':colorLight ? 'black' : 'white'}"><b>CONTATO</b></a></li>
       </ul>
     </div>
   </nav>
 </div>
 
 <!------------------------------------------------------------About------------------------------------------------------------>
-<section id="about" [ngStyle]="{'background-color': colorLight ? '#e0e0e0' : 'black'}">
+<section id="home" [ngStyle]="{'background-color': colorLight ? '#e0e0e0' : 'black'}">
   <div class="container">
     <div class="col s12 m12 center-align">
 
@@ -85,7 +84,7 @@
 <section id="skills" [ngStyle]="{'background-color': colorLight ? 'white' : 'black'}" >
   <div class="container">
     <div class="col s12 m12 center-align" style="padding: 10px;">
-      <h1 [ngStyle]="{'color': colorLight ? 'black' : 'white'}">SKILLS</h1>
+      <h1 [ngStyle]="{'color': colorLight ? 'black' : 'white'}">SOFTWARE SKILLS</h1>
       <ngx-gauge [ngStyle]="{'color': colorLight ? 'black' : 'white'}" style="margin-right: 5px;"
         [type]="'full'" 
         [value]="valueSkillPython" 
@@ -114,19 +113,106 @@
         [foregroundColor]="'red'" >
       </ngx-gauge>
 
+      <ngx-gauge [ngStyle]="{'color': colorLight ? 'black' : 'white'}"
+        [type]="'full'" 
+        [value]="valueSkillAngular" 
+        [label]="'Angular'" 
+        [append]="'%'" 
+        [backgroundColor]="'white'"
+        [foregroundColor]="'yellow'" >
+      </ngx-gauge>
+
+      <ngx-gauge [ngStyle]="{'color': colorLight ? 'black' : 'white'}"
+        [type]="'full'" 
+        [value]="valueSkillPhp" 
+        [label]="'PHP'" 
+        [append]="'%'" 
+        [backgroundColor]="'white'"
+        [foregroundColor]="'purple'" >
+      </ngx-gauge>
+
+    </div>
+    <div class="col s12 m12 center-align" style="padding: 10px;">
+      <h1 [ngStyle]="{'color': colorLight ? 'black' : 'white'}">HARDWARE SKILLS</h1>
+
+      <ngx-gauge [ngStyle]="{'color': colorLight ? 'black' : 'white'}"
+        [type]="'semi'" 
+        [value]="valueSkillLinux" 
+        [label]="'Linux'" 
+        [append]="'%'" 
+        [backgroundColor]="'white'"
+        [foregroundColor]="'pink'" >
+      </ngx-gauge>
+
+    </div>
+
+    <div class="col s12 m12 center-align" style="padding: 10px;">
+      <h1 [ngStyle]="{'color': colorLight ? 'black' : 'white'}" style="padding-bottom: 40px;">CERTIFICAÇÕES</h1>
+
+      <div class="row">
+        <div *ngFor="let certification of objCertifications;" class="col s6 m3">
+          <div class="card" style="height: 300px;">
+            
+            <div class="card-image">
+              <img src="{{ certification.image }}">
+              <span class="card-title" style="color: black;">{{ certification.school }} </span>
+            </div>
+            
+            <div class="card-content">
+              <p>
+                {{ certification.name }} <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        <div class="col s6">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/sample-1.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s6">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/sample-1.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>-->
+      </div>
+
+
     </div>
   </div>
 </section>
 
-<!-- <div class="divider"></div>
-
+<div class="divider" [ngStyle]="{'color-line': colorLight ? 'white' : 'black'}" ></div>
+<!--
 <section id="contact">
   <div class="container">
 
   </div> 
 </section>-->
 <!-- </div> -->
-
 
 <footer class="page-footer" [ngStyle]="{'background-color': colorLight ? 'white' : 'black'}">
   <div class="container">
