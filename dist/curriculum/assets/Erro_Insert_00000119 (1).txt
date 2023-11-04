@@ -1,0 +1,18 @@
+Exception: FOREIGN KEY constraint failed (code 787 SQLITE_CONSTRAINT_FOREIGNKEY)
+Tabela: [CLIEND.TXT]
+Linha / Tabela: [3290 - CLIEND.TXT]
+value[1]: [0002]
+value[2]: [0072]
+value[3]: [2]
+value[4]: []
+value[5]: [R ALUMINIO]
+value[6]: [000099]
+value[7]: [CIDADE NOVA]
+value[8]: [JACUPIRANGA]
+value[9]: [SP]
+value[10]: [11940000]
+value[11]: []
+value[12]: []
+value[13]: [3537]
+=======================================================
+
