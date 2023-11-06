@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import { interval } from 'rxjs';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
-  template: `
-    <div [chart]="chart"></div>
-  `,
 })
 
 export class HomePageComponent {
-
-
   colorLight = false;
   currentIcon = 'bi bi-database';
   iconsIndex = 0;

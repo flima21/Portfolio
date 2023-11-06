@@ -1,1 +1,0 @@
-Linha/Tabela:[3290 - CLIEND.TXT] - FOREIGN KEY constraint failed (code 787 SQLITE_CONSTRAINT_FOREIGNKEY)
