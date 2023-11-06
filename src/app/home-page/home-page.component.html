@@ -64,11 +64,11 @@
         Database.</p>
 
       <div class="center-align">
-        <a class="waves-effect waves-light btn"
+        <a class="waves-effect waves-light btn" href="../../assets/files/Curriculo-Felipe-Lima-out-2023.pdf" target="_blank"
           style="background: rgba(59, 198, 0, 0.737); margin-left: auto; margin-bottom: 10px;"><i
             class="bi bi-download"></i><b> download cv</b></a>
-        <a class="waves-effect waves-light btn"
-          style="background: rgb(41, 109, 255); margin-left: 5px; margin-bottom: 10px;"
+        <a class="waves-effect waves-light btn" href="https://www.linkedin.com/in/felipe-lima-294703202/"
+          style="background: rgb(41, 109, 255); margin-left: 5px; margin-bottom: 10px;" target="_blank"
         ><i class="bi bi-linkedin"></i><b>
             found me</b>
         </a>
@@ -146,10 +146,14 @@
 
     </div>
 
-    <div class="col s12 m12 center-align" style="padding: 10px;">
-      <h1 [ngStyle]="{'color': colorLight ? 'black' : 'white'}" style="padding-bottom: 40px;">CERTIFICAÇÕES</h1>
+    <div class="col s12 m12 center-right" style="padding: 10px;">
+      <h1 [ngStyle]="{'color': colorLight ? 'black' : 'white'}" style="padding-bottom: 10px;">CERTIFICAÇÕES</h1>
 
       <div class="row">
+        <ol>
+          <li [ngStyle]="{'color': colorLight ? 'black' : 'white'}" style="font-size: 24px;" *ngFor="let certification of objCertifications;">{{ certification.name }}, ministrado por ({{ certification.school }})</li>
+        </ol>
+        <!--
         <div *ngFor="let certification of objCertifications;" class="col s6 m3">
           <div class="card" style="height: 300px;">
             
@@ -165,6 +169,7 @@
             </div>
           </div>
         </div>
+        -->
       </div>
     </div>
   </div>
@@ -189,7 +194,7 @@
 
   <div class="footer-copyright">
     <div class="container">
-      <p>Development by Felipe Lima</p>
+      <p>Development by Felipe Lima 2023</p>
        <!-- <a [ngClass]="{'grey-text text-lighten-3':colorLight, 'black-text text-lighten-3':!colorLight}" href="#!">More Links</a> -->
     </div>
   </div> 

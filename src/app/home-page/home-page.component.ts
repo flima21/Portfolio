@@ -31,7 +31,7 @@ export class HomePageComponent {
     { name:'Oracle Cloud Infrastructure 2023 Certified Foundations Associate',codeAuth:'302305695OCIF2023CA',linkAuth:'',school:'ORACLE UNIVERSITY'                ,image:''},
     { name:'Oracle Cloud Data Management 2023 Certified Foundations Associate',codeAuth:'302305695OCDMF2023',linkAuth:'',school:'ORACLE UNIVERSITY'                ,image:''},
     { name:'Santander BootCamp',codeAuth:'',linkAuth:'',school:'SANTANDER BRASIL'                                                                                  ,image:'../../assets/icons/santanderCardPng.png'},
-    // { name:'Santander Coders 2023 2ª Edição',codeAuth:'',linkAuth:'',school:'Santander Brasil'                                                                  ,image:''},
+    { name:'Santander Coders 2023 2ª Edição',codeAuth:'',linkAuth:'',school:'Santander Brasil'                                                                  ,image:''},
   ];               
 
 
@@ -59,5 +59,7 @@ export class HomePageComponent {
     else {
       this.colorLight = true;
     }
+
+    
   }
 }
