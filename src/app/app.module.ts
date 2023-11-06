@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NgxGaugeModule } from 'ngx-gauge';
 import { LoadingComponent } from './loading/loading.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     BrowserModule,
     AppRoutingModule,
     NgxGaugeModule,
-    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

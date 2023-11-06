@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { interval } from 'rxjs';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home-page',
